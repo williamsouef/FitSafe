@@ -11,6 +11,15 @@
 		B3046A08299225D70017F667 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3046A07299225D70017F667 /* ContentView.swift */; };
 		B3046A0A299225D90017F667 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B3046A09299225D90017F667 /* Assets.xcassets */; };
 		B3046A0D299225D90017F667 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B3046A0C299225D90017F667 /* Preview Assets.xcassets */; };
+		B3046A15299226250017F667 /* ItemsDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B3046A13299226250017F667 /* ItemsDataModel.xcdatamodeld */; };
+		B3046A18299227390017F667 /* ItemsProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3046A17299227390017F667 /* ItemsProvider.swift */; };
+		B3046A1B2992289F0017F667 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3046A1A2992289F0017F667 /* Item.swift */; };
+		B3046A1E29922A810017F667 /* CreateItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3046A1D29922A810017F667 /* CreateItemView.swift */; };
+		B3046A2029922DD80017F667 /* EditItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3046A1F29922DD80017F667 /* EditItemViewModel.swift */; };
+		B3046A22299235D00017F667 /* ItemDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3046A21299235D00017F667 /* ItemDetailView.swift */; };
+		B3046A24299250030017F667 /* ItemRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3046A23299250030017F667 /* ItemRowView.swift */; };
+		B3046A2C2993A7AB0017F667 /* NoShoesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3046A2B2993A7AB0017F667 /* NoShoesView.swift */; };
+		B3046A5E299B971E0017F667 /* EditItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3046A5D299B971E0017F667 /* EditItemView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +28,15 @@
 		B3046A07299225D70017F667 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		B3046A09299225D90017F667 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B3046A0C299225D90017F667 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		B3046A14299226250017F667 /* ItemsDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ItemsDataModel.xcdatamodel; sourceTree = "<group>"; };
+		B3046A17299227390017F667 /* ItemsProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemsProvider.swift; sourceTree = "<group>"; };
+		B3046A1A2992289F0017F667 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
+		B3046A1D29922A810017F667 /* CreateItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateItemView.swift; sourceTree = "<group>"; };
+		B3046A1F29922DD80017F667 /* EditItemViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditItemViewModel.swift; sourceTree = "<group>"; };
+		B3046A21299235D00017F667 /* ItemDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemDetailView.swift; sourceTree = "<group>"; };
+		B3046A23299250030017F667 /* ItemRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemRowView.swift; sourceTree = "<group>"; };
+		B3046A2B2993A7AB0017F667 /* NoShoesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoShoesView.swift; sourceTree = "<group>"; };
+		B3046A5D299B971E0017F667 /* EditItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditItemView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,8 +69,12 @@
 		B3046A04299225D70017F667 /* FitSafe */ = {
 			isa = PBXGroup;
 			children = (
+				B3046A1C29922A600017F667 /* Create  */,
+				B3046A192992288A0017F667 /* Model */,
+				B3046A162992270A0017F667 /* Provider */,
 				B3046A05299225D70017F667 /* FitSafeApp.swift */,
-				B3046A07299225D70017F667 /* ContentView.swift */,
+				B3046A13299226250017F667 /* ItemsDataModel.xcdatamodeld */,
+				B3046A2A2993A7860017F667 /* Views */,
 				B3046A09299225D90017F667 /* Assets.xcassets */,
 				B3046A0B299225D90017F667 /* Preview Content */,
 			);
@@ -65,6 +87,43 @@
 				B3046A0C299225D90017F667 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		B3046A162992270A0017F667 /* Provider */ = {
+			isa = PBXGroup;
+			children = (
+				B3046A17299227390017F667 /* ItemsProvider.swift */,
+			);
+			name = Provider;
+			sourceTree = "<group>";
+		};
+		B3046A192992288A0017F667 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				B3046A1A2992289F0017F667 /* Item.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		B3046A1C29922A600017F667 /* Create  */ = {
+			isa = PBXGroup;
+			children = (
+				B3046A1D29922A810017F667 /* CreateItemView.swift */,
+				B3046A5D299B971E0017F667 /* EditItemView.swift */,
+				B3046A1F29922DD80017F667 /* EditItemViewModel.swift */,
+			);
+			path = "Create ";
+			sourceTree = "<group>";
+		};
+		B3046A2A2993A7860017F667 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				B3046A21299235D00017F667 /* ItemDetailView.swift */,
+				B3046A23299250030017F667 /* ItemRowView.swift */,
+				B3046A07299225D70017F667 /* ContentView.swift */,
+				B3046A2B2993A7AB0017F667 /* NoShoesView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,8 +196,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B3046A1B2992289F0017F667 /* Item.swift in Sources */,
 				B3046A08299225D70017F667 /* ContentView.swift in Sources */,
+				B3046A24299250030017F667 /* ItemRowView.swift in Sources */,
+				B3046A15299226250017F667 /* ItemsDataModel.xcdatamodeld in Sources */,
+				B3046A2C2993A7AB0017F667 /* NoShoesView.swift in Sources */,
 				B3046A06299225D70017F667 /* FitSafeApp.swift in Sources */,
+				B3046A5E299B971E0017F667 /* EditItemView.swift in Sources */,
+				B3046A22299235D00017F667 /* ItemDetailView.swift in Sources */,
+				B3046A18299227390017F667 /* ItemsProvider.swift in Sources */,
+				B3046A2029922DD80017F667 /* EditItemViewModel.swift in Sources */,
+				B3046A1E29922A810017F667 /* CreateItemView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -267,6 +335,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"FitSafe/Preview Content\"";
+				DEVELOPMENT_TEAM = UKMR5469AZ;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -295,6 +364,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"FitSafe/Preview Content\"";
+				DEVELOPMENT_TEAM = UKMR5469AZ;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -337,6 +407,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		B3046A13299226250017F667 /* ItemsDataModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				B3046A14299226250017F667 /* ItemsDataModel.xcdatamodel */,
+			);
+			currentVersion = B3046A14299226250017F667 /* ItemsDataModel.xcdatamodel */;
+			path = ItemsDataModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = B30469FA299225D70017F667 /* Project object */;
 }
