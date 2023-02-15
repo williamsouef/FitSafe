@@ -1,6 +1,6 @@
 #  Runner App
 
-- Runner travel that track the kilometers progression of your shoes.
+- App for the serious Runner who want to track the kilometers progression if their shoes.
 
 ## Technologies Used
 - Swift
