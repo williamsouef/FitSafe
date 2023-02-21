@@ -50,6 +50,25 @@ final class ItemsProvider {
 
     
     
+    func exist(_ item: Item, in context: NSManagedObjectContext) -> Item? {
+        try? context.existingObject(with: item.objectID) as? Item
+    }
+    func delete(_ item: Item, in context: NSManagedObjectContext) throws {
+        if let existingContact = exist(item, in: context) {
+            context.delete(existingContact)
+            Task(priority: .background) {
+                try await context.perform {
+                    try context.save()
+                }
+            }
+        }
+    }
+    
+    func persist(in context: NSManagedObjectContext) throws {
+        if context.hasChanges {
+          try context.save()
+        }
+    }
     
     
     

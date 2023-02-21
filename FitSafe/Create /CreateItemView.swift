@@ -40,13 +40,12 @@ struct CreateItemView: View {
                     Text("\(Int(vm.item.capacity))km")
                         .padding()
                     
-                } else {
+                }else{
                     
                        Text("My New Run ")
                           .font(.caption)
                           .fontWeight(.heavy)
-                      Slider(value:$vm.item.newRun, in: 0...1000,step: 2.0)
-                          .padding(10)
+                         
                     Stepper(value: $vm.item.newRun, in: 0...1000) {
                         Text("\(Int(vm.item.newRun))km")
                              .padding()

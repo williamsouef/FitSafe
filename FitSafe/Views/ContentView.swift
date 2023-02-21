@@ -37,7 +37,7 @@ struct ContentView: View {
                                         Button(role:.destructive){
                                             
                                                 do{
-                                                 try  deleteItem(item)
+                                                    try  provider.delete(item, in: provider.viewContext)
                                                 } catch {
                                                     print(error)
                                                 }
@@ -82,21 +82,7 @@ struct ContentView: View {
 }
 
 
-private extension ContentView {
-    
-    func deleteItem(_ item : Item) throws {
-        let context = provider.viewContext
-        let existingObject = try context.existingObject(with: item.objectID)
-        context.delete(existingObject)
-        Task(priority: .background) {
-            try await context.perform {
-                try context.save()
-            }
-        }
-    }
-    
-    
-}
+
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
