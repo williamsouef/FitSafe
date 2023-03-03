@@ -18,8 +18,9 @@ struct ItemRowView: View {
             Text(item.name)
                 .font(.title)
             ProgressView(value: item.newRun, total: item.capacity)
+                .tint(item.newRun < item.capacity ? .green : .red)
 
-            Text("Actual progression: \(Int(item.newRun))Km")
+            Text(item.newRun < item.capacity ?"Actual progression: \(Int(item.newRun))Km":"You achived the limit")
             Text("Capacity: \(Int(item.capacity))Km")
                 .font(.caption)
             
